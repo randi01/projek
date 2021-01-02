@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block konten %}
+<div class="jumbotron">
+    <h1 class="display-4">Selamat Datang di Website kami RS</h1>
+    <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora rem error, dolores iure ad itaque
+        enim nam veniam quasi perferendis sunt tempore vel! Enim beatae, ratione voluptas illo maiores aspernatur!</p>
+    <hr class="my-4">
+    {% for data in data_maluku %}
+    <h4>Provinsi Maluku</h4>
+    <ul>
+        <li>
+            <h4>Positif : {{data.Kasus_Posi}}</h4>
+        </li>
+        <li>
+            <h4>Sembuh : {{data.Kasus_Semb}}</h4>
+        </li>
+        <li>
+            <h4>Meningal : {{data.Kasus_Meni}}</h4>
+        </li>
+    </ul>
+    {% endfor %}
+    <a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+
+{% block konten %}
+
+<h3>detail pengaduan</h3>
+<div class="jumbotron">
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer
+            so that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <!--table-->
+        <table class="table table-hover">
+            <tr>
+                <td>NPM</td>
+                <td>{{dt_pengaduan.mahasiswa.npm}}</td>
+            </tr>
+
+            <td>NAMA</td>
+            <td>{{dt_pengaduan.mahasiswa.nama}}</td>
+            </tr>
+
+            <td>Email</td>
+            <td>{{dt_pengaduan.mahasiswa.email}}</td>
+            </tr>
+
+            <td>Kelas</td>
+            <td>{{dt_pengaduan.mahasiswa.kelas}}</td>
+            </tr>
+
+            <td>Alamat</td>
+            <td>{{dt_pengaduan.mahasiswa.alamat}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading">Data Pengaduan!</h4>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit
+            longer
+            so that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+
+        <table class="table table-hover">
+            <tr>
+                <td>Tgl Post</td>
+                <td>{{dt_pengaduan.tgl_post}}</td>
+            </tr>
+            <tr>
+                <td>Subjek</td>
+                <td>{{dt_pengaduan.subjek}}</td>
+            </tr>
+            <tr>
+                <td>Kategori</td>
+                <td>{{dt_pengaduan.Kategori}}</td>
+            </tr>
+            <tr>
+                <td>pengaduan :</td>
+            </tr>
+            <tr>
+                <td>{{dt_pengaduan.detail_pengaduan}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <a class="btn btn-warning" href="{{url_for('rmahasiswa.pengaduan')}}">Kembali</a>
+
+    {% endblock %}
